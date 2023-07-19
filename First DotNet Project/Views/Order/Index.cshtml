@@ -1,0 +1,29 @@
+﻿@model List<First_DotNet_Project.Models.Category>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Order Details</h1>
+<table class="table">
+    <thead>
+    <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Order</th>
+    <th>Ordertime</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach(var x in Model)
+        {
+            <tr>
+                <td>@x.ID</td>
+                <td>@x.Name</td>
+                <td>@x.Order</td>
+                <td>@x.Ordertime.ToString("MM-dd-yyyy")</td>
+                <td><a href="Order/Update/@x.ID">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

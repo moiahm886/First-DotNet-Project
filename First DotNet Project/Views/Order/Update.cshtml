@@ -1,0 +1,28 @@
+﻿@model First_DotNet_Project.Models.UpdateModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Edit Order Here</h1>
+<form method="post" action="Update">
+    <div class="mb-3">
+    <label for="ID" class="form-label">ID</label>
+    <input type="number" class="form-control" asp-for="ID" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="Order" class="form-label">Order</label>
+        <input type="number" class="form-control" asp-for="Order">
+    </div>
+    <div class="mb-3">
+        <label for="OrderTime" class="form-label">OrderTime</label>
+        <input type="date" class="form-control" asp-for="Ordertime">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-danger" asp-action="delete"
+    asp-controller="Order">Delete</button>
+</form>
